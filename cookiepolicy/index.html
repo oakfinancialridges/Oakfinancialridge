@@ -1,0 +1,174 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Client Login</title>
+<meta name="description" content="We are an independent, full-service financial services firm providing 
+Private Client and Investment Banking Services to individual, institutional and corporate customers. Our experienced professionals take time to understand what you want to accomplish and work hard to help you reach your goals.​​​​​​​">
+<meta name="generator" content="https://www.oakfinancialridge.com/">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="OAKOWNfinaiZZZ.ico" rel="shortcut icon" type="image/x-icon">
+<link href="OAKOWNfinaiZZZ.png" rel="apple-touch-icon">
+<link href="https://fonts.googleapis.com/css?family=Cairo:700,200,600,300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya:700,400,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=B612:700,400" rel="stylesheet">
+<link href="OAK-FINANCIAL-DASHBOARD.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<link rel="stylesheet" href="cookiepolicy/cookiepolicy.css">
+<script src="cookiepolicy/cookiepolicy.js"></script>
+<script src="index.js"></script>
+<script>
+$(document).ready(function()
+{
+if ($.cookie('policy') == null) 
+{
+   $.gritter.add(
+   {
+      title: 'Oak Financial Ridge',
+      text: 'Our website uses a number of cookies to improve your experience when using the website. We also use analytics cookies to monitor how people use the website, with a view to making improvements and making the site more useful.<br><a class="check" href="#" style="color:#ccc">Do not show this message again</a>.',
+      sticky: false,
+      class_name: 'gritter',
+      time: 5000
+   });
+   $('a.check').on('click', function() 
+   {
+      var timestamp = (new Date()).getTime();
+      $.cookie('policy', timestamp, { expires: new Date(timestamp + (31536000 * 1000)), path: '/'});
+      $('#gritter-notice-wrapper').fadeOut("slow");
+   });
+} 
+});
+</script>
+</head>
+<body>
+<div id="container">
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_Image1" style="display:inline-block;width:131px;height:69px;z-index:0;">
+<img src="img1-1.png" id="Image1" alt="">
+</div>
+</div>
+<div class="col-3">
+<div id="wb_JavaScript1" style="display:inline-block;width:100%;z-index:1;">
+<div style="color:#000000;font-size:12px;font-family:Arial;font-weight:normal;font-style:normal;text-align:right;text-decoration:none" id="basicdate"></div>
+<script>
+   var now = new Date();
+   var days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+   var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+   var date = ((now.getDate() < 10) ? "0" : "") + now.getDate();
+   var year = (now.getYear() < 1000) ? now.getYear() + 1900 : now.getYear();
+   today = days[now.getDay()] + ", " + months[now.getMonth()] + " " + date + ", " + year;
+   var basicdate = document.getElementById('basicdate');
+   basicdate.innerHTML = today;
+</script>
+
+
+
+</div>
+<div id="wb_Text5">
+<span style="color:#00008B;font-family:'Cairo';font-weight:200;font-size:16px;"><strong>YOUR DETAILS ARE SAFE WITH US</strong></span>
+</div>
+<div id="wb_Text1">
+<span style="color:#000000;font-family:'Cairo';font-weight:200;font-size:13px;">We are using 256 bit AES encryption<br></span>
+</div>
+</div>
+<div class="col-4">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_Text2">
+<span style="color:#00008B;font-family:'Cairo';font-weight:600;font-size:17px;"><strong>Welcome to Online Banking</strong></span>
+</div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_Text4">
+<span style="color:#000000;font-family:'Cairo';font-weight:600;font-size:11px;"><strong>Never tell anyone your security details.<br><br>Never respond to an email asking for your personal security information.<br><br>If you think you have received a fraudulent email, please forward it to <a href="mailto:phishing@oakfinancialridge.com">phishing@oakfinancialridge.com</a> and then delete it.</strong></span>
+</div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<form name="loginform" enctype="multipart/form-data" accept-charset="UTF-8" id="LayoutGrid4">
+<input type="hidden" name="formid" value="layoutgrid4">
+<input type="hidden" name="form_name" value="loginform">
+<div class="row">
+<div class="col-1">
+
+</div>
+<div class="col-2">
+   <span id="err1" style="padding-top: 5px; color: black; font-size: 11px; display: none; margin: auto; width: fit-content; width: 100%; text-align: center; pointer-events: none; color: red;">
+      Incorrect Login information Please check your credentials and try again.
+   </span>
+<input type="text" id="username" style="display:block;width: 100%;height:28px;z-index:10;" name="username" value="" spellcheck="false" placeholder="USERNAME">
+<input type="password" id="password" style="display:block;width: 100%;height:28px;z-index:11;" name="password" value="" spellcheck="false" placeholder="PASSWORD">
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+<input type="checkbox" id="rememberme" name="rememberme" value="on" style="display:inline-block;z-index:8;" title="Save my details on this computer">
+</div>
+<div class="col-2">
+<label for="rememberme" id="Label4" style="display:block;width:100%;line-height:15px;z-index:9;">Save my details on this computer</label>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_CssMenu2" style="display:inline-block;width:100%;z-index:13;">
+<ul id="CssMenu2" role="menubar" class="nav">
+<li class="nav-item firstmain"><a role="menuitem" class="nav-link" href="./forgot_user_ID.php" target="_blank">Forgotten&nbsp;your&nbsp;username?</a>
+</li>
+<li class="nav-item"><a role="menuitem" class="nav-link" href="./forgot_pass.php" target="_blank">Forgotten&nbsp;your&nbsp;password?</a>
+</li>
+</ul>
+
+</div>
+<a href="#">
+   <!-- <input type="submit" id="login1" name="login1" value="LOG IN" style="display:block;width: 100%;;height:34px;z-index:14;"> -->
+   <p id="login1">Login</p>
+</a>
+<div id="wb_Text7">
+<span style="color:#2F4F4F;font-family:'Cairo';font-weight:300;font-size:13px;">version - 21.01.02</span>
+</div>
+<div id="wb_CssMenu1" style="display:inline-block;width:100%;z-index:16;">
+<ul id="CssMenu1" role="menubar" class="nav">
+<li class="nav-item firstmain"><a role="menuitem" class="nav-link" target="_blank">Open&nbsp;an&nbsp;Account</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="col-3">
+
+</div>
+</div>
+</form>
+</div>
+</body>
+</html>
